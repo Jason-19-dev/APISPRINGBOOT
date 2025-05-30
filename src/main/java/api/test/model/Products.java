@@ -5,37 +5,44 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 // example from https://docs.spring.io/spring-boot/reference/data/sql.html
+
 @Entity
 public class Products implements Serializable {
 
 	@Id
 	@GeneratedValue
 	private Long id;
-
-	@Column(nullable = false,name="product_name")
+	@Column
 	private String name;
-
-	@Column(nullable = false)
+	@Column
+	private String description;
+	@Column
 	private String price;
-
-	protected City() {
-		// no-args constructor required by JPA spec
-		// this one is protected since it should not be used directly
+	
+	public Long getId() {
+		return id;
 	}
-
-	public City(String name, String state) {
-		this.name = name;
-		this.state = state;
+	public void setId(Long id) {
+		this.id = id;
 	}
-
 	public String getName() {
-		return this.name;
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
 	}
 
-	public String getState() {
-		return this.;
-	}
-
-	// ... etc
 
 }
