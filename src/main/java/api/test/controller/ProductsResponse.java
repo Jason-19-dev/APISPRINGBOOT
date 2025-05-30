@@ -15,7 +15,7 @@ public class ProductsResponse {
  
 	// private List<Product> products = new ArrayList<>();
 	@GetMapping("/{productId}")
-	public void getProduct() {
+	public void getProduct() {	
 		
 		return null;
 	}
