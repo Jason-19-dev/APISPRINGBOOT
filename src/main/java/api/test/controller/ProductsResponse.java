@@ -14,13 +14,13 @@ public class ProductsResponse {
  
     // private List<Product> products = new ArrayList<>();
     @GetMapping("/{productId}")
-    public void getProduct() {
+    public String getProduct() {
 		
-		return null;
+		return "<h1>Product is found</h1>";
 	}
 
 	@DeleteMapping("/{productId}")
-	public void deleteProduct() {
-		return null;
+	public String deleteProduct() {
+		return "<h1>Product deleted</h1>";
 	}
 }
