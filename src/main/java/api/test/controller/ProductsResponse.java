@@ -21,6 +21,6 @@ public class ProductsResponse {
 
 	@DeleteMapping("/{productId}")
 	public String deleteProduct() {
-		return "<h1>Product deleted</h1>";
+		return "delete";
 	}
 }
