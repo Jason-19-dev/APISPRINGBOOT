@@ -1,15 +1,15 @@
 services:
-  app:
-    build: .
-    container_name: springboot_app
-    ports:
-      - "8080:8080"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://sqlserver_db:1433;databaseName=mi_basededatos
-      SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: admin
-    depends_on:
-      - sqlserver_db
+  # app:
+  #   build: .
+  #   container_name: springboot_app
+  #   ports:
+  #     - "8080:8080"
+  #   environment:
+  #     SPRING_DATASOURCE_URL: jdbc:sqlserver://sqlserver_db:1433;databaseName=mi_basededatos
+  #     SPRING_DATASOURCE_USERNAME: sa
+  #     SPRING_DATASOURCE_PASSWORD: admin
+  #   depends_on:
+  #     - sqlserver_db
 
   sqlserver_db:
     image: mcr.microsoft.com/mssql/server:2022-latest

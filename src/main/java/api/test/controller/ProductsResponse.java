@@ -7,16 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
-import api.test.model.Product;
 
 
 @RestController
 @RestMapping("/products")
 public class ProductsResponse {
  
-	private List<Product> products = new ArrayList<>();
+	// private List<Product> products = new ArrayList<>();
 	@GetMapping("/{productId}")
-	public Product getProduct() {
+	public void getProduct() {
 		
 		return null;
 	}
