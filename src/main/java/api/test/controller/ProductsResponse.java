@@ -9,18 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
 public class ProductsResponse {
  
     // private List<Product> products = new ArrayList<>();
-    @GetMapping("/{productId}")
-    public String getProduct() {
+    @GetMapping("/product")
+    public String getProducts() {
 		
 		return "<h1>Product is found</h1>";
-	}
-
-	@DeleteMapping("/{productId}")
-	public String deleteProduct() {
-		return "delete";
 	}
 }
