@@ -1,8 +1,11 @@
 package com.gamervault.gvgg.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import com.gamervault.gvgg.models.ProductosModel;
 import com.gamervault.gvgg.services.ProductosService;
 
 // import java.util.List;
@@ -16,8 +19,8 @@ public class ProductosController {
     private ProductosService productosService;
 
     @GetMapping
-    public String getAllProductos() {
-        return productosService.findAll();
+    public List<ProductosModel> getAllProductos() {
+       return productosService.findAll();
     }
 
 }

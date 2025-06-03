@@ -15,8 +15,16 @@ public class UsuarioController {
     private UsersService usersService;
 
     @GetMapping
-    public String prueba() {
-        return "prueba";
+    public List<UsersModel> prueba() {
+
+        return usersService.listar();
+    }
+
+    @PostMapping
+    public List<UsersModel> add(){
+        
+        usersService.guardar(null);
+        return null;
     }
     
    
